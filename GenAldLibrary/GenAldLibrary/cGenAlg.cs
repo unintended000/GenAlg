@@ -145,6 +145,7 @@ namespace GenAldLibrary
                 New_Population[i] = Child;
                   
             }
+            Population = New_Population;
 
         }
         

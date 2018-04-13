@@ -23,10 +23,23 @@ namespace Genetic_algorithm
         private void button1_Click(object sender, EventArgs e)
         {
             int MaxPrice = (int) numericUpDown1.Value;
+            int[] Weight = new int[dataGridView1.Rows.Count-1];
+            int[] Price =  new int[dataGridView1.Rows.Count - 1];
 
-             int[] Weight = { 1, 2, 3, 4,5 };
-             int[] Price = { 1, 2, 3, 4, 5 };
+            for (int i = 1; i <= 2; i++)
+                for (int j = 0; j < dataGridView1.Rows.Count - 1; j++)
+                {
+                    if (i == 1)
+                        Weight[j] =Convert.ToInt32(dataGridView1.Rows[j].Cells[i].Value);
+                    else
+                        Price[j] = Convert.ToInt32(dataGridView1.Rows[j].Cells[i].Value);
+                }
+                    
+
+          /*   
              cGenAlg eGenAlg = new cGenAlg((int)numericUpDown2.Value, (int)numericUpDown3.Value, Weight,Price,MaxPrice, (int)numericUpDown3.Value);
-        }
+       */ }
+
+      
     }
 }
