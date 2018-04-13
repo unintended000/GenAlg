@@ -43,11 +43,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -72,7 +77,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(434, 112);
             this.dataGridView1.TabIndex = 1;
-            
             // 
             // Column1
             // 
@@ -191,11 +195,54 @@
             this.richTextBox1.TabIndex = 11;
             this.richTextBox1.Text = "";
             // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(106, 283);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown5.TabIndex = 12;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 285);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "К-во итерация";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(568, 181);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Цена";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(559, 246);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Важность";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 371);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.numericUpDown5);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.numericUpDown4);
             this.Controls.Add(this.label4);
@@ -214,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,6 +284,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

@@ -34,6 +34,9 @@ namespace GenAldLibrary
         /// </summary>
         private int Count_Parent;
 
+        public cSpecies ResultChild;
+        private int Count_iteration;
+
         public cSpecies[] Population;
         private cSpecies[] Parent;
 
@@ -44,7 +47,7 @@ namespace GenAldLibrary
         /// <param name="_Count_Genes">К-во генов</param>
         /// <param name="_Weight_Genes">Стоимость</param>
         /// <param name="_Price_Genes">Вес</param>
-        public cGenAlg(int CountSpecies, int _Count_Genes, int[] _Weight_Genes, int[] _Price_Genes, int _MaxPrice,int _Count_Parent)
+        public cGenAlg(int CountSpecies, int _Count_Genes, int[] _Weight_Genes, int[] _Price_Genes, int _MaxPrice,int _Count_Parent,int _Count_iteration)
         {
             Population = new cSpecies[CountSpecies];
             Weight_Genes = _Weight_Genes;
@@ -52,13 +55,21 @@ namespace GenAldLibrary
             Count_Genes = _Count_Genes;
             Count_Parent = _Count_Parent;
             MaxPrice = _MaxPrice;
+            Count_iteration = _Count_iteration;
 
             //Создаем первую популяцию
             New_GenAlg(CountSpecies);
-            Get_parents(Population, Count_Parent);
-            Get_new_population(Parent);
 
-            
+            for (int i = 0; i < Count_iteration; i++)
+            {
+                Get_parents(Population, Count_Parent);
+                Get_new_population(Parent);
+            }
+
+            Sort(Population);
+            ResultChild = Population[0];
+
+
         }
 
         /// <summary>

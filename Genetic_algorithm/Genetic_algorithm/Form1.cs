@@ -22,6 +22,9 @@ namespace Genetic_algorithm
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Сделать норм форму
+            //нормально присваивать гены
+            //ну и полюбас еще что-нибудь вылезет
             int MaxPrice = (int) numericUpDown1.Value;
             int[] Weight = new int[dataGridView1.Rows.Count-1];
             int[] Price =  new int[dataGridView1.Rows.Count - 1];
@@ -36,9 +39,16 @@ namespace Genetic_algorithm
                 }
                     
 
-          /*   
-             cGenAlg eGenAlg = new cGenAlg((int)numericUpDown2.Value, (int)numericUpDown3.Value, Weight,Price,MaxPrice, (int)numericUpDown3.Value);
-       */ }
+             
+             cGenAlg eGenAlg = new cGenAlg((int)numericUpDown2.Value, (int)numericUpDown3.Value, Weight,Price,MaxPrice, (int)numericUpDown3.Value,(int)numericUpDown4.Value);
+
+            
+                for (int j = 0; j < dataGridView1.Rows.Count - 1; j++)
+                {
+                dataGridView1.Rows[j].Cells[3].Value = eGenAlg.ResultChild.Gene[j];
+                }
+
+        }
 
       
     }
