@@ -26,33 +26,41 @@ namespace GenAldLibrary
         /// <param name="Count">К-во генов</param>
         /// <param name="_Weight">Стоимость</param>
         /// <param name="_Price">Цена</param>
-        public cSpecies(int Count, int[] _Weight, int[] _Price)
+        public cSpecies(int Count)
         {
-            Random rnd = new Random();
-
             Gene = new bool[Count];
             
-            
-            for (int i = 0; i < Count;i++)
-            {
-                
-                Gene[i] = (rnd.Next(0,2) == 1) ? true : false;
-            }
-
-            Get_Weight_Price(_Weight, _Price);
 
         }
 
+        public  cSpecies New_Species(int Count, int[] _Weight, int[] _Price)
+        {
+            cSpecies Species = new cSpecies(Count);
+            
+            Random rnd = new Random();
+
+            for (int i = 0; i < Count; i++)
+            {
+
+                Species.Gene[i] = (rnd.Next(0, 2) == 1) ? true : false;
+            }
+
+            Get_Weight_Price(Species, _Weight, _Price);
+
+            return Species;
+        }
+            
 
        
-       public void  Get_Weight_Price(int[] _Weight, int[] _Price)
+       public  void  Get_Weight_Price(cSpecies Species, int[] _Weight, int[] _Price)
         {
-            Weight = 0;
-            Price = 0;
-            for (int i=0; i < Gene.Count(); i++)
+            Species.Weight = 0;
+            Species.Price = 0;
+            for (int i=0; i < Species.Gene.Count(); i++)
             {
-                Weight += (Gene[i]) ? _Weight[i]: 0;
-                Price += (Gene[i]) ? _Price[i] : 0;
+                
+                Species.Weight += (Species.Gene[i]) ? _Weight[i]: 0;
+                Species.Price += (Species.Gene[i]) ? _Price[i] : 0;
             }
 
 

@@ -66,14 +66,19 @@ namespace GenAldLibrary
         /// </summary>
         /// <param name="CountSpecies"></param>
         private void New_GenAlg(int CountSpecies) {
-            
+            cSpecies Species = new cSpecies(Count_Genes);
             for (int i = 0; i < CountSpecies; i++)
             {
-              
-                cSpecies Species= new cSpecies(Count_Genes, Weight_Genes, Price_Genes);
-                Population[i] = Species;
+                do
+                {                    
+                     Species= Species.New_Species(Count_Genes, Weight_Genes, Price_Genes);
+                    if (Species.Price<=MaxPrice)
+                    Population[i] = Species;
+                    
+                } while (Population[i] == null);
                 Thread.Sleep(20); //Костыли подъехали
-              
+
+
             }
         }
 
@@ -87,12 +92,14 @@ namespace GenAldLibrary
 
             for (int i = 0; i < Population.Count() - 1; i++)
             {
+                cSpecies Species;
                 for (int j = 0; j < Population.Count() - 1; j++)
-                    if (Population[j].Weight > Population[j + 1].Weight)
+                    if (Population[j].Weight < Population[j + 1].Weight)
                     {
-                        Population[j].Weight =  Population[j].Weight + Population[j + 1].Weight;
-                        Population[j + 1].Weight = Population[j].Weight - Population[j + 1].Weight;
-                        Population[j].Weight = Population[j].Weight - Population[j + 1].Weight;
+                        Species = Population[j];
+                        Population[j] = Population[j + 1];
+                        Population[j + 1]= Species;
+                        
                     }
             }
             return Population;
@@ -118,23 +125,24 @@ namespace GenAldLibrary
         {
             Random rnd = new Random();
             cSpecies[] New_Population = new cSpecies[Population.Count()];
-            bool[] NewGene = new bool[Count_Genes];
-           
+                    
 
             for (int i=0; i < Population.Count(); i++)
             {
                 //Выбираем случайных родителей
-                cSpecies Parent1 = Parent[rnd.Next(Count_Parent + 1)];
-                cSpecies Parent2 = Parent[rnd.Next(Count_Parent + 1)];
+                cSpecies Parent1 = Parent[0];
+                cSpecies Parent2 = Parent[rnd.Next(1,Count_Parent)];
+                cSpecies Child = new cSpecies(Count_Genes);
                 //Собираем новые гены
                 for (int j = 0; j < Count_Genes;j++)
                 {
                     if (j % 2 == 0)
-                        NewGene[j] = Parent1.Gene[j];
-                    else NewGene[j] = Parent2.Gene[j];
+                        Child.Gene[j] = Parent1.Gene[j];
+                    else Child.Gene[j] = Parent2.Gene[j];
 
                 }
-                New_Population[i].Gene = NewGene;
+                Child.Get_Weight_Price(Child, Weight_Genes, Price_Genes);
+                New_Population[i] = Child;
                   
             }
 

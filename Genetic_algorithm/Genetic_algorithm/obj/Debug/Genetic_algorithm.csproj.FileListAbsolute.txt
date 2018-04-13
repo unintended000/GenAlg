@@ -9,3 +9,14 @@ C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\Genetic_algorithm\Genetic_
 C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\Genetic_algorithm\Genetic_algorithm\obj\Debug\Genetic_algorithm.pdb
 C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\Genetic_algorithm\Genetic_algorithm\bin\Debug\GenAldLibrary.dll
 C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\Genetic_algorithm\Genetic_algorithm\bin\Debug\GenAldLibrary.pdb
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\bin\Debug\Genetic_algorithm.exe.config
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\obj\Debug\Genetic_algorithm.exe
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\obj\Debug\Genetic_algorithm.pdb
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\bin\Debug\Genetic_algorithm.exe
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\bin\Debug\Genetic_algorithm.pdb
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\bin\Debug\GenAldLibrary.dll
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\bin\Debug\GenAldLibrary.pdb
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\obj\Debug\Genetic_algorithm.csprojResolveAssemblyReference.cache
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\obj\Debug\Genetic_algorithm.Form1.resources
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\obj\Debug\Genetic_algorithm.Properties.Resources.resources
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAlg\Genetic_algorithm\Genetic_algorithm\obj\Debug\Genetic_algorithm.csproj.GenerateResource.Cache

@@ -24,8 +24,8 @@ namespace Genetic_algorithm
         {
             int MaxPrice = (int) numericUpDown1.Value;
 
-             int[] Weight = { 1,1, 2, 3, 4,5,6,7,8,9 };
-             int[] Price = { 1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+             int[] Weight = { 1, 2, 3, 4,5 };
+             int[] Price = { 1, 2, 3, 4, 5 };
              cGenAlg eGenAlg = new cGenAlg((int)numericUpDown2.Value, (int)numericUpDown3.Value, Weight,Price,MaxPrice, (int)numericUpDown3.Value);
         }
     }
