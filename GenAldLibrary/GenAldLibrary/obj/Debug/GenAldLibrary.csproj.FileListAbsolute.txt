@@ -1,0 +1,5 @@
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAldLibrary\GenAldLibrary\bin\Debug\GenAldLibrary.dll
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAldLibrary\GenAldLibrary\bin\Debug\GenAldLibrary.pdb
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAldLibrary\GenAldLibrary\obj\Debug\GenAldLibrary.csprojResolveAssemblyReference.cache
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAldLibrary\GenAldLibrary\obj\Debug\GenAldLibrary.dll
+C:\Users\anuto\OneDrive\Hmm-Hmm\3 class\6 s\II\GenAlg\GenAldLibrary\GenAldLibrary\obj\Debug\GenAldLibrary.pdb
