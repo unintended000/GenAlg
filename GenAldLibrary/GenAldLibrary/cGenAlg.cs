@@ -140,20 +140,24 @@ namespace GenAldLibrary
 
             for (int i=0; i < Population.Count(); i++)
             {
-                //Выбираем случайных родителей
-                cSpecies Parent1 = Parent[0];
-                cSpecies Parent2 = Parent[rnd.Next(1,Count_Parent)];
-                cSpecies Child = new cSpecies(Count_Genes);
-                //Собираем новые гены
-                for (int j = 0; j < Count_Genes;j++)
+                do
                 {
-                    if (j % 2 == 0)
-                        Child.Gene[j] = Parent1.Gene[j];
-                    else Child.Gene[j] = Parent2.Gene[j];
+                    //Выбираем случайных родителей
+                    cSpecies Parent1 = Parent[0];
+                    cSpecies Parent2 = Parent[rnd.Next(1, Count_Parent)];
+                    cSpecies Child = new cSpecies(Count_Genes);
+                    //Собираем новые гены
+                    for (int j = 0; j < Count_Genes; j++)
+                    {
+                        if (j % 2 == 0)
+                            Child.Gene[j] = Parent1.Gene[j];
+                        else Child.Gene[j] = Parent2.Gene[j];
 
-                }
-                Child.Get_Weight_Price(Child, Weight_Genes, Price_Genes);
-                New_Population[i] = Child;
+                    }
+                    Child.Get_Weight_Price(Child, Weight_Genes, Price_Genes);
+                    if (Child.Price <= MaxPrice)
+                        New_Population[i] = Child;
+                } while (New_Population[i] == null);
                   
             }
             Population = New_Population;
