@@ -65,6 +65,18 @@ namespace GenAldLibrary
 
 
         }
+
+        public cSpecies Mutation(cSpecies _Species)
+        {
+            cSpecies Species = _Species;
+            Random rnd = new Random();
+            int i = rnd.Next(_Species.Gene.Count());
+            Species.Gene[i] = (Species.Gene[i]) ? false : true;
+
+            return Species;
+        }
+
+
         
 
     }

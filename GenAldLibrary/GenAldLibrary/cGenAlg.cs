@@ -39,6 +39,9 @@ namespace GenAldLibrary
 
         public cSpecies[] Population;
         private cSpecies[] Parent;
+        public int[] Max;
+        public int[] Average;
+        private int _Average;
 
         /// <summary>
         /// Ген. Алгоритм
@@ -56,14 +59,21 @@ namespace GenAldLibrary
             Count_Parent = _Count_Parent;
             MaxPrice = _MaxPrice;
             Count_iteration = _Count_iteration;
-
+            Max = new int[Count_iteration];
+            Average = new int[Count_iteration];
+           
             //Создаем первую популяцию
             New_GenAlg(CountSpecies);
 
+
             for (int i = 0; i < Count_iteration; i++)
             {
+                
                 Get_parents(Population, Count_Parent);
                 Get_new_population(Parent);
+                Max[i] = Population[0].Weight;
+                Average[i] = _Average / Population.Count();
+
             }
 
             Sort(Population);
@@ -135,15 +145,17 @@ namespace GenAldLibrary
         private void Get_new_population(cSpecies[] Parent)
         {
             Random rnd = new Random();
-            cSpecies[] New_Population = new cSpecies[Population.Count()];
-                    
 
+            cSpecies[] New_Population = new cSpecies[Population.Count()];
+                _Average = 0;       
+          
             for (int i=0; i < Population.Count(); i++)
             {
+               
                 do
                 {
                     //Выбираем случайных родителей
-                    cSpecies Parent1 = Parent[0];
+                    cSpecies Parent1 = Parent[rnd.Next(0, Count_Parent)];
                     cSpecies Parent2 = Parent[rnd.Next(1, Count_Parent)];
                     cSpecies Child = new cSpecies(Count_Genes);
                     //Собираем новые гены
@@ -154,11 +166,22 @@ namespace GenAldLibrary
                         else Child.Gene[j] = Parent2.Gene[j];
 
                     }
+
+                    int r = rnd.Next(0, 100);
+                    if (r < 10)
+                    {
+                        Child = Child.Mutation(Child);
+
+                    }
+
                     Child.Get_Weight_Price(Child, Weight_Genes, Price_Genes);
                     if (Child.Price <= MaxPrice)
                         New_Population[i] = Child;
                 } while (New_Population[i] == null);
-                  
+                _Average += New_Population[i].Weight;
+
+
+
             }
             Population = New_Population;
 

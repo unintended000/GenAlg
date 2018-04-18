@@ -52,6 +52,14 @@ namespace Genetic_algorithm
 
             label6.Text = "Важность: " + eGenAlg.ResultChild.Weight;
             label7.Text = "Общая стоимость: " + eGenAlg.ResultChild.Price;
+            chart1.Series[0].Points.Clear();
+            chart1.Series[1].Points.Clear();
+            for (int i = 0; i < numericUpDown5.Value; i++)
+            {
+               
+                chart1.Series[0].Points.AddXY(i,eGenAlg.Max[i]);
+                chart1.Series[1].Points.AddXY(i, eGenAlg.Average[i]);
+            }
             this.Enabled = true;
 
         }
@@ -96,5 +104,7 @@ namespace Genetic_algorithm
                 }
             }
         }
+
+       
     }
 }
